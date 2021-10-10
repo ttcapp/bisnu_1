@@ -43,11 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
               RaisedButton(
                 color: btnColor1,
                 child: Text(btnText1,style:
-                TextStyle(color: Colors.red,
-                    fontWeight: FontWeight.bold,fontSize: 40),),
+                TextStyle(color: Colors.white,
+                    fontWeight: FontWeight.bold,fontSize: 20),),
                   onPressed: (){
                   setState(() {
-                    btnColor1=Colors.white;
+                    btnColor1=Colors.red;
                     btnText1="Button Pressed";
                     img1visibility=true;
                   });
@@ -62,10 +62,37 @@ class _MyHomePageState extends State<MyHomePage> {
                       "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg"
                   ),
               ),
-              Container(
-                height: 200,
-                  width: 250,
-                  child: Image.asset("assets/images/image4.jpeg")),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      height: 200,
+                        width: 150,
+                        child: Image.asset("assets/images/image4.jpeg")
+                    ),
+                    Container(
+                        height: 200,
+                        width: 150,
+                        child: Image.asset("assets/images/image4.jpeg")
+                    ),
+                    Container(
+                        height: 200,
+                        width: 150,
+                        child: Image.asset("assets/images/image4.jpeg")
+                    ),
+                    Container(
+                        height: 200,
+                        width: 150,
+                        child: Image.asset("assets/images/image4.jpeg")
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              )
+
             ],
           ),
         ),
