@@ -1,3 +1,5 @@
+import 'package:bisnubiswas1/listview_page.dart';
+import 'package:bisnubiswas1/second_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,6 +39,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
           child: Column(
             children: [
+              ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ListViewPage()));
+                  },
+                  child: Text("Go to Second Page")
+              ),
               SizedBox(
                 height: 15,
               ),
